@@ -18,7 +18,6 @@ android {
 
     buildFeatures {
         viewBinding true
-        dataBinding true
     }
 
     compileOptions {
@@ -32,28 +31,15 @@ android {
 }
 
 dependencies {
-    // Core & UI
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
-    // Lifecycle, ViewModel, & LiveData (Fixes 'asLiveData' and 'viewModelScope')
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
-    
-    // Room Database
     implementation 'androidx.room:room-runtime:2.5.2'
     kapt 'androidx.room:room-compiler:2.5.2'
     implementation 'androidx.room:room-ktx:2.5.2'
-
-    // WorkManager (Fixes Worker/Affirmation errors)
     implementation 'androidx.work:work-runtime-ktx:2.8.1'
-
-    // Coroutines (Fixes suspend function errors)
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
-
-    // Auth
-    implementation 'com.google.android.gms:play-services-auth:20.7.0'
 }

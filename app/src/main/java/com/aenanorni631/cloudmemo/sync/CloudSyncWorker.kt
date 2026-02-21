@@ -6,7 +6,7 @@ import androidx.work.WorkerParameters
 
 class CloudSyncWorker(context: Context, params: WorkerParameters) : Worker(context, params) {
     override fun doWork(): Result {
-        // Stubs for Google Drive and Calendar sync
+        // Sync logic goes here
         return Result.success()
     }
 }

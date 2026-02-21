@@ -1,5 +1,5 @@
 name: Android Build & Debug
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
@@ -14,32 +14,22 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Debug Diagnostics
-      run: |
-        echo "Checking files..."
-        ls -R gradle/
-        java -version
-        chmod +x gradlew
-
     - name: Build with Gradle
-      id: gradle_build
       run: ./gradlew assembleDebug --stacktrace
-      continue-on-error: true
 
-    - name: Upload APK on Success
-      if: steps.gradle_build.outcome == 'success'
+    - name: List Build Outputs (Debug)
+      run: find . -name "*.apk"
+
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: cloud-memo-apk
-        path: app/build/outputs/apk/debug/*.apk
+        name: CloudMemo-v1.0-APK
+        path: "**/build/outputs/apk/debug/*.apk"
+        if-no-files-found: error
 
-    - name: Upload Logs on Failure
-      if: steps.gradle_build.outcome == 'failure' || always()
+    - name: Upload Build Logs on Failure
+      if: failure()
       uses: actions/upload-artifact@v4
       with:
-        name: build-failure-diagnostic-logs
-        path: |
-          **/build/reports/
-          **/build/test-results/
-          *.log
-          app/build/outputs/logs/
+        name: build-logs
+        path: "**/build/reports/"

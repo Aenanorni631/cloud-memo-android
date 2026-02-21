@@ -1,6 +1,6 @@
 # 📝 Cloud Memo v1.0 Development Roadmap
 
-## Overall Progress: [▓▓▓▓▓▓░░░░░░░░░░░░░░] 30%
+## Overall Progress: [▓▓▓▓▓▓▓▓░░░░░░░░░░░░] 40%
 
 ---
 

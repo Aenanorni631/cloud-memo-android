@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.aenanorni631.cloudmemo'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.aenanorni631.cloudmemo"

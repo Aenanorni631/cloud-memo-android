@@ -1,30 +1,17 @@
-[2026-02-21 16:30:17]
-ACTION: Gradle Version Update
-STATUS: SUCCESS
-PURPOSE: Fixing 'Gradle 8 does not exist' error
-DETAILS: Changed version to '8.0' in workflow and linked JAVA_HOME.
+REBUILDING LOG WITH READABLE DESCRIPTIONS...
+[2026-02-21 16:34:25]
+CHANGE: Updated Gradle to 8.0
+REASON: The previous '8' was too vague; GitHub needed the specific '8.0' version to locate the build tools.
 ------------------------------------------------
-[2026-02-21 16:30:17]
-ACTION: AndroidX Enablement
-STATUS: SUCCESS
-PURPOSE: Fixing classpath metadata errors
-DETAILS: Created gradle.properties with useAndroidX=true and enableJetifier=true.
+[2026-02-21 16:34:25]
+CHANGE: Enabled AndroidX & Jetifier
+REASON: Modern libraries like Room and Material Design won't work without the AndroidX namespace active.
 ------------------------------------------------
-[2026-02-21 16:30:17]
-ACTION: Resource Manifest Fix
-STATUS: SUCCESS
-PURPOSE: Fixing 'ic_launcher_round not found' error
-DETAILS: Generated XML adaptive icons in mipmap-anydpi-v26.
+[2026-02-21 16:34:25]
+CHANGE: Added Adaptive XML Icons
+REASON: The Manifest was looking for 'ic_launcher_round' which didn't exist yet; created placeholders to stop the crash.
 ------------------------------------------------
-[2026-02-21 16:30:17]
-ACTION: JVM Target Alignment
-STATUS: SUCCESS
-PURPOSE: Fixing KAPT/Kotlin target mismatch
-DETAILS: Forced Java 17 and Kotlin jvmTarget 17 in app/build.gradle.
-------------------------------------------------
-[2026-02-21 16:30:19]
-ACTION: SDK 34 Upgrade
-STATUS: SUCCESS
-PURPOSE: Satisfy AndroidX 1.12.0 requirements
-DETAILS: Bumped compileSdk from 33 to 34 to fix AAR metadata check failure.
+[2026-02-21 16:34:25]
+CHANGE: Aligned JVM to 17
+REASON: Kotlin and Java were fighting over different versions; forced both to 17 so they can 'talk' to each other.
 ------------------------------------------------

@@ -13,11 +13,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Generate Fresh Gradle Wrapper
-      run: gradle wrapper --gradle-version 8.0
+    - name: Generate Compatibility Wrapper
+      run: gradle wrapper --gradle-version 7.5
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug --stacktrace
+      run: ./gradlew clean assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4

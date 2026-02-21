@@ -1,0 +1,26 @@
+# 📝 Cloud Memo v1.0 Development Roadmap
+
+## Overall Progress: [▓▓░░░░░░░░░░░░░░░░░░] 10%
+
+---
+
+### 🟢 Phase 1: Infrastructure & CI/CD
+- [x] Initial Repository Setup
+- [x] GitHub Actions Workflow Configuration
+- [x] Gradle Wrapper & Environment Fixes
+- [ ] **Current Step: Verify Successful APK Build**
+
+### ⚪ Phase 2: Core UI & Local Storage
+- [ ] Material Design Theme (Midnight Blue)
+- [ ] Room Database Implementation (Offline Storage)
+- [ ] Notebooks & Tabs System
+
+### ⚪ Phase 3: Smart Features
+- [ ] AI Chat Assistant (Floating Button)
+- [ ] Speech-to-Text Integration
+- [ ] Google Drive & Calendar Sync
+
+### ⚪ Phase 4: Polish & Notifications
+- [ ] Daily Affirmations System
+- [ ] PDF/File Upload Support
+- [ ] Final Debugging & Release

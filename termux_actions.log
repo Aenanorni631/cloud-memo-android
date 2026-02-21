@@ -22,3 +22,9 @@ STATUS: SUCCESS
 PURPOSE: Fixing KAPT/Kotlin target mismatch
 DETAILS: Forced Java 17 and Kotlin jvmTarget 17 in app/build.gradle.
 ------------------------------------------------
+[2026-02-21 16:30:19]
+ACTION: SDK 34 Upgrade
+STATUS: SUCCESS
+PURPOSE: Satisfy AndroidX 1.12.0 requirements
+DETAILS: Bumped compileSdk from 33 to 34 to fix AAR metadata check failure.
+------------------------------------------------

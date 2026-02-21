@@ -15,3 +15,7 @@ REASON: The Manifest was looking for 'ic_launcher_round' which didn't exist yet;
 CHANGE: Aligned JVM to 17
 REASON: Kotlin and Java were fighting over different versions; forced both to 17 so they can 'talk' to each other.
 ------------------------------------------------
+[2026-02-21 16:34:27]
+CHANGE: Bumped compileSdk to 34
+REASON: The latest AndroidX Core-KTX library requires Android 14 (API 34) tools to compile, even if targeting older phones.
+------------------------------------------------

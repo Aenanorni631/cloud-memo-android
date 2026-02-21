@@ -1,4 +1,4 @@
-package com.example.cloudmemo.data
+package com.aenanorni631.cloudmemo.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,4 +1,4 @@
-package com.example.cloudmemo.sync
+package com.aenanorni631.cloudmemo.sync
 
 import android.content.Context
 import androidx.work.Worker

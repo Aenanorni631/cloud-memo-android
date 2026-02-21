@@ -1,6 +1,6 @@
-package com.example.cloudmemo.ai
+package com.aenanorni631.cloudmemo.ai
 
-import com.example.cloudmemo.data.Note
+import com.aenanorni631.cloudmemo.data.Note
 
 class AiAssistant {
     fun generateIdea(prompt: String): String {

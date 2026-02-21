@@ -19,3 +19,7 @@ REASON: Kotlin and Java were fighting over different versions; forced both to 17
 CHANGE: Bumped compileSdk to 34
 REASON: The latest AndroidX Core-KTX library requires Android 14 (API 34) tools to compile, even if targeting older phones.
 ------------------------------------------------
+[2026-02-21 16:37:44]
+CHANGE: Enabled DataBinding & Added WorkManager
+REASON: The app code was calling for notification and database tools that weren't included in the build list.
+------------------------------------------------

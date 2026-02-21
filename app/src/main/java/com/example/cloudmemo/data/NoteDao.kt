@@ -1,4 +1,4 @@
-package com.example.cloudmemo.data
+package com.aenanorni631.cloudmemo.data
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

@@ -1,4 +1,4 @@
-package com.example.cloudmemo.notifications
+package com.aenanorni631.cloudmemo.notifications
 
 import android.content.Context
 import androidx.work.Worker

@@ -1,4 +1,4 @@
-package com.example.cloudmemo.notifications
+package com.aenanorni631.cloudmemo.notifications
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

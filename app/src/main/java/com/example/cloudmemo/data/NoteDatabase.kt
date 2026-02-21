@@ -1,4 +1,4 @@
-package com.example.cloudmemo.data
+package com.aenanorni631.cloudmemo.data
 
 import android.content.Context
 import androidx.room.Database

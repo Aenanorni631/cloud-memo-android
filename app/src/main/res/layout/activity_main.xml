@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.xml/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        app:hintEnabled="false">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/noteEditText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="top"
-            android:hint="Start typing your memo..."
-            android:background="@android:color/transparent"
-            android:inputType="textMultiLine" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/uploadButton"
+        android:id="@+id/fab_ai_assistant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="24dp"
-        app:srcCompat="@android:drawable/stat_sys_upload"
-        android:contentDescription="Upload to Drive" />
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        android:contentDescription="Open AI Assistant" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

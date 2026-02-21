@@ -1,6 +1,6 @@
 # 📝 Cloud Memo v1.0 Development Roadmap
 
-## Overall Progress: [▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░] 60%
+## Overall Progress: [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░] 80%
 
 ---
 
@@ -16,13 +16,14 @@
 - [ ] Room Database Implementation (Offline Storage)
 - [ ] Notebooks & Tabs System
 
-### 🟡 Phase 3: Smart Features
-- [ ] **Current Step: Verifying Phase 2 Stability (Build Check)**
+### 🟢 Phase 3: Smart Features
+- [x] Verifying Phase 2 Stability (Build Check)
 - [ ] AI Chat Assistant (Floating Button)
 - [ ] Speech-to-Text Integration
 - [ ] Google Drive & Calendar Sync
 
-### ⚪ Phase 4: Polish & Notifications
+### 🟡 Phase 4: Polish & Notifications
+- [ ] **Current Step: Morning Affirmations & Final UI Polish**
 - [ ] Daily Affirmations System
 - [ ] PDF/File Upload Support
 - [ ] Final Debugging & Release

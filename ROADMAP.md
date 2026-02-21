@@ -1,6 +1,6 @@
 # 📝 Cloud Memo v1.0 Development Roadmap
 
-## Overall Progress: [▓▓░░░░░░░░░░░░░░░░░░] 10%
+## Overall Progress: [▓▓▓▓░░░░░░░░░░░░░░░░] 20%
 
 ---
 
@@ -8,7 +8,8 @@
 - [x] Initial Repository Setup
 - [x] GitHub Actions Workflow Configuration
 - [x] Gradle Wrapper & Environment Fixes
-- [ ] **Current Step: Verify Successful APK Build**
+- [x] Verify Successful APK Build
+- [ ] **Current Step: Initial App Architecture (Room - [ ] **Current Step: Verify Successful APK Build** UI)**
 
 ### ⚪ Phase 2: Core UI & Local Storage
 - [ ] Material Design Theme (Midnight Blue)

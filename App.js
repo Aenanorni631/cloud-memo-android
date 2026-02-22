@@ -8,7 +8,7 @@ export default function App() {
         <SafeAreaView style={styles.container}>
             {/* Header / Nav */}
             <View style={styles.nav}>
-                <Text style={styles.title}>CloudMemo v1.0</Text>
+                <Text style={styles.title}>Cloud Memo V1.0</Text>
                 <TouchableOpacity onPress={() => alert('Recording...')}>
                     <Text style={styles.recordBtn}>🎤 Record</Text>
                 </TouchableOpacity>

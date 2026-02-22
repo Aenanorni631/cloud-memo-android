@@ -4,7 +4,6 @@ buildscript {
         minSdkVersion = 21
         compileSdkVersion = 33
         targetSdkVersion = 33
-        ndkVersion = "23.1.7779620"
     }
     repositories {
         google()
@@ -18,16 +17,8 @@ buildscript {
 
 allprojects {
     repositories {
-        maven {
-            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url("$rootDir/../node_modules/react-native/android")
-        }
-        maven {
-            // Android JSC is installed from npm
-            url("$rootDir/../node_modules/jsc-android/dist")
-        }
-        google()
         mavenCentral()
+        google()
         maven { url 'https://www.jitpack.io' }
     }
 }

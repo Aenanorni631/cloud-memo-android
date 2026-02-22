@@ -12,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
-    
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
@@ -37,3 +37,6 @@ dependencies {
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:hermes-android")
 }
+
+// This line handles the auto-linking of all your npm packages!
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

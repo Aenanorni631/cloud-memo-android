@@ -56,3 +56,5 @@ Why: The build failed because it couldn't resolve specific symbols for the devel
 Why: The compiler couldn't find the 'BuildConfig' symbol. By explicitly importing it from the app's package, we tell the Java compiler exactly where to look for the 'DEBUG' flag.
 - What we changed: Reconfigured android/build.gradle and android/app/build.gradle.
 Why: The previous build failed with 21 errors because the Java compiler couldn't find the React Native libraries. These changes point the build system to the node_modules folder where the framework lives.
+- What we changed: Re-implemented the native_modules.gradle auto-linking and aligned package.json dependencies.
+Why: The previous build failed because the Java compiler couldn't see the React Native framework. This script forces the build system to look into node_modules to find the missing 'com.facebook.react' packages.

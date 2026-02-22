@@ -12,3 +12,5 @@ Why: To establish the primary interface and ensure the GitHub-hosted code is upd
 Why: To ensure the GitHub build environment has the necessary tools (Java/Gradle) to successfully compile the code into a debuggable Android APK.
 - What we changed: Created package.json and a placeholder package-lock.json.
 Why: The GitHub Action failed because it couldn't find a lockfile for caching. This fix allows the build to move past the Node.js setup phase.
+- What we changed: Re-initialized the 'android' folder structure and pushed the Notebook Dashboard UI with file upload support.
+Why: To fix the 'No such file or directory' error on GitHub by giving the build runner an android folder to enter, while simultaneously adding the Notebook features.

@@ -32,3 +32,5 @@ Why: The previous automated initialization failed to create the executable wrapp
 Why: The previous repair created the shell script but not the binary JAR file it needed to execute. This provides the actual engine required for the GitHub Action to compile the APK.
 - What we changed: Corrected the 'gradlew' script to include the 'java' command and forced the executable bit via git update-index. Added a minimal AndroidManifest.xml.
 Why: The previous script attempted to execute a JAR file directly, which caused a permission error (Exit 126). This fix ensures the Java runner is used and that the project structure is valid for a successful APK build.
+- What we changed: Re-wrote 'gradlew' to call the Wrapper class directly, added the Android Gradle Plugin to the root build file, and created a placeholder MainActivity.java.
+Why: To resolve the 'no main manifest attribute' error and provide the necessary Build Tools and source code required for a successful APK compilation after the repository wipe.

@@ -1,7 +1,17 @@
-// Root build file for GitHub Actions to recognize
 buildscript {
-    repositories { google(); mavenCentral() }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Link the Android Gradle Plugin required for v1.0
+        classpath("com.android.tools.build:gradle:8.0.2")
+    }
 }
+
 allprojects {
-    repositories { google(); mavenCentral() }
+    repositories {
+        google()
+        mavenCentral()
+    }
 }

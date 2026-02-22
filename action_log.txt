@@ -58,3 +58,5 @@ Why: The compiler couldn't find the 'BuildConfig' symbol. By explicitly importin
 Why: The previous build failed with 21 errors because the Java compiler couldn't find the React Native libraries. These changes point the build system to the node_modules folder where the framework lives.
 - What we changed: Re-implemented the native_modules.gradle auto-linking and aligned package.json dependencies.
 Why: The previous build failed because the Java compiler couldn't see the React Native framework. This script forces the build system to look into node_modules to find the missing 'com.facebook.react' packages.
+- What we changed: Replaced the build engine with the 8.0.2 backup configuration and downloaded the missing gradle-wrapper.jar.
+Why: The previous builds were failing because the 'transmission' (the JAR file) was missing. This restores the exact environment that worked previously.

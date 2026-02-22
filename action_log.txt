@@ -20,3 +20,5 @@ Why: To resolve the 'cd android' build failure by restoring the native project f
 Why: To provide the infrastructure for cloud backups and scheduling, and to give the user a direct way to trigger cloud uploads from the UI.
 - What we changed: Created AIChatPanel.js and integrated it into the main App.js with visibility toggling.
 Why: To provide a dedicated interface for real-time AI assistance, allowing the user to interact with their notes through a conversational chat window.
+- What we changed: Created NotificationService.js and a ReminderModal component for the Notebook UI.
+Why: To enable contextual follow-up reminders, allowing users to schedule system notifications directly from their notes.

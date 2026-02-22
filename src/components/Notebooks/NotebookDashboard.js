@@ -1,5 +1,6 @@
 import React from 'react';
 import { AIService } from '../../services/AIService';
+import { ExportService } from '../../services/ExportService';
 
 export default function NotebookDashboard() {
     const handleAISummarize = async () => {
@@ -8,11 +9,18 @@ export default function NotebookDashboard() {
         console.log(summary);
     };
 
+    const handleExport = async () => {
+        await ExportService.exportToPDF("MyFirstNote", "This is the content of the note.");
+    };
+
     return (
         <div className="notebook-dashboard" style={{ padding: '20px' }}>
             <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                 <h2>My Notebooks</h2>
-                <button onClick={handleAISummarize} style={{ background: '#ff9800', border: 'none', padding: '8px 15px', borderRadius: '5px', color: 'white', fontWeight: 'bold' }}>⚡ AI Summarize</button>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <button onClick={handleAISummarize} style={{ background: '#ff9800', border: 'none', padding: '8px 15px', borderRadius: '5px', color: 'white', fontWeight: 'bold' }}>⚡ AI Summarize</button>
+                    <button onClick={handleExport} style={{ background: '#4caf50', border: 'none', padding: '8px 15px', borderRadius: '5px', color: 'white' }}>📄 Export PDF</button>
+                </div>
             </header>
             
             <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>

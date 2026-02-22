@@ -3,7 +3,6 @@ import Settings from './src/components/Settings/Settings';
 import NotebookDashboard from './src/components/Notebooks/NotebookDashboard';
 import AIChatPanel from './src/components/AIChat/AIChatPanel';
 import useSpeechToText from './src/hooks/useSpeechToText';
-import { GoogleService } from './src/services/GoogleService';
 import './src/styles/theme.css';
 
 export default function App() {
@@ -20,7 +19,6 @@ export default function App() {
                     <button onClick={() => setView('settings')} style={{ color: view === 'settings' ? '#4da6ff' : 'white', background: 'none', border: 'none' }}>Settings</button>
                 </div>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                    <button onClick={() => GoogleService.syncToDrive([])} style={{ background: '#4da6ff', color: 'white', border: 'none', padding: '5px 10px', borderRadius: '4px', fontSize: '12px' }}>☁️ Sync</button>
                     <button onClick={isListening ? stopSpeech : startSpeech} style={{ color: isListening ? '#ff4d4d' : 'white', background: 'none', border: 'none', fontSize: '18px' }}>
                         {isListening ? '🛑' : '🎤'}
                     </button>

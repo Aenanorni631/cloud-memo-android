@@ -10,9 +10,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Match the working version from your backup
+        // This is the version your backup confirms works
         classpath("com.android.tools.build:gradle:8.0.2")
-        classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
 
@@ -20,5 +19,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // Adding the local node_modules path as a safety net
+        maven { url("$rootDir/../node_modules/react-native/android") }
     }
 }

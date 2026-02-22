@@ -38,3 +38,5 @@ Why: To resolve the 'no main manifest attribute' error and provide the necessary
 Why: To deliver a clean, bug-free v1.0 experience that focuses on local notebooks, AI chat, and offline functionality without the distraction of unconfigured cloud features.
 - What we changed: Injected the full UI source code (App.js, Notebooks, AI Chat, and Styles) into the repository.
 Why: The previous build was successful but the app appeared as a blank white screen because the repository wipe had removed all source code. This restores the actual application interface.
+- What we changed: Created index.js and app.json to register the component; re-wrote App.js using Native components.
+Why: The app was white because the React Native engine was starting but had no 'index.js' to tell it which component to render. This connects the UI to the Android activity.

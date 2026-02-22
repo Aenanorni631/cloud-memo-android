@@ -8,3 +8,5 @@ Why: The repository wipe deleted the configuration that triggers GitHub Actions.
 Why: The repository wipe deleted the core Android blueprints. These files are strictly required for GitHub Actions to compile the JavaScript code into a working APK.
 - What we changed: Initialized core UI theme, Settings component, and root App.js layout.
 Why: To establish the primary interface and ensure the GitHub-hosted code is updated with the version 1.0 architecture.
+- What we changed: Updated .github/workflows/build.yml to include JDK 17, Java distribution settings, and corrected the APK artifact path.
+Why: To ensure the GitHub build environment has the necessary tools (Java/Gradle) to successfully compile the code into a debuggable Android APK.

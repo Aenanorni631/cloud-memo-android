@@ -22,3 +22,5 @@ Why: To provide the infrastructure for cloud backups and scheduling, and to give
 Why: To provide a dedicated interface for real-time AI assistance, allowing the user to interact with their notes through a conversational chat window.
 - What we changed: Created NotificationService.js and a ReminderModal component for the Notebook UI.
 Why: To enable contextual follow-up reminders, allowing users to schedule system notifications directly from their notes.
+- What we changed: Created AIService.js for text processing and added an 'AI Summarize' button to the Notebook Dashboard.
+Why: To implement the core intelligence features of the app, allowing users to automatically condense long notes into quick summaries and extract tasks using AI.

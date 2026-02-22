@@ -54,3 +54,5 @@ Why: The app was failing because Android didn't know which class was responsible
 Why: The build failed because it couldn't resolve specific symbols for the development environment. This 'Universal' configuration uses the standard React Native bridge that works across most versions.
 - What we changed: Manually added 'import com.cloudmemo.BuildConfig;' and verified the Java folder structure.
 Why: The compiler couldn't find the 'BuildConfig' symbol. By explicitly importing it from the app's package, we tell the Java compiler exactly where to look for the 'DEBUG' flag.
+- What we changed: Reconfigured android/build.gradle and android/app/build.gradle.
+Why: The previous build failed with 21 errors because the Java compiler couldn't find the React Native libraries. These changes point the build system to the node_modules folder where the framework lives.

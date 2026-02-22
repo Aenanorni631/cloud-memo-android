@@ -64,3 +64,5 @@ Why: The previous builds were failing because the 'transmission' (the JAR file) 
 Why: The build failed because it couldn't resolve the plugin version. By explicitly stating '0.72.0', we bypass the auto-detection that was failing in the GitHub Action environment.
 - What we changed: Added a 'pluginManagement' block to settings.gradle and updated the plugin classpath.
 Why: The build failed because Gradle couldn't locate the 'react-native-gradle-plugin' even after npm install. Adding these pointers ensures the build engine finds the plugin inside the node_modules folder.
+- What we changed: Removed the pluginManagement block and hard-coded the local Maven path for the React Native plugin in the buildscript.
+Why: Gradle 8.0.2 was failing to resolve the plugin online. By pointing it to the local node_modules folder where 'npm install' puts the files, we bypass the online check entirely.

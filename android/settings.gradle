@@ -1,13 +1,7 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
+rootProject.name = 'CloudMemo'
 
-// This connects the native modules from your package.json
-apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+// Link the native modules directly from the node_modules folder
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); 
+applyNativeModulesSettingsGradle(settings)
 
 include ':app'
-rootProject.name = 'CloudMemo'

@@ -1,0 +1,16 @@
+:root {
+  --bg-color: #191970; /* Midnight Blue Default */
+  --text-color: #ffffff;
+  --accent-color: #4da6ff;
+}
+body.theme-black { --bg-color: #000000; --text-color: #ffffff; }
+body.theme-white { --bg-color: #ffffff; --text-color: #333333; }
+body { background-color: var(--bg-color); color: var(--text-color); font-family: system-ui, sans-serif; transition: all 0.3s ease; }
+
+.floating-ai-btn {
+  position: fixed; bottom: 20px; right: 20px;
+  background-color: var(--accent-color); color: white;
+  border-radius: 50%; width: 60px; height: 60px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex; justify-content: center; align-items: center; cursor: pointer;
+}

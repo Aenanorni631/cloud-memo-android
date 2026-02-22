@@ -1,8 +1,0 @@
-CLOUD MEMO v1.0 - FEATURE LIST
-==============================
-1. AI ASSISTANT: Floating button access, auto-notebook generation, and idea generation.
-2. SYNC: Google Drive (notes/files) and Google Calendar (appointments/notifications).
-3. NOTEBOOKS: Titled tabs, PDF/file uploads, and custom notebook colors.
-4. TOOLS: Speech-to-text, offline local storage (Room DB), and per-note reminders.
-5. WELLNESS: Daily morning affirmations and quotes via notification.
-6. UI: Modern/Sleek design. Defaults: Midnight Blue, Black, or White.

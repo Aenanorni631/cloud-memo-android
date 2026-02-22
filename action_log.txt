@@ -14,3 +14,5 @@ Why: To ensure the GitHub build environment has the necessary tools (Java/Gradle
 Why: The GitHub Action failed because it couldn't find a lockfile for caching. This fix allows the build to move past the Node.js setup phase.
 - What we changed: Re-initialized the 'android' folder structure and pushed the Notebook Dashboard UI with file upload support.
 Why: To fix the 'No such file or directory' error on GitHub by giving the build runner an android folder to enter, while simultaneously adding the Notebook features.
+- What we changed: Re-initialized the React Native framework to restore the 'android' folder. Added useSpeechToText hook and StorageService for offline notes.
+Why: To resolve the 'cd android' build failure by restoring the native project files, and to implement Chunk 3 features for hands-free note-taking and local data persistence.

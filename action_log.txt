@@ -28,3 +28,5 @@ Why: To implement the core intelligence features of the app, allowing users to a
 Why: To provide users with a way to generate shareable PDF documents from their notes, completing the core v1.0 feature set.
 - What we changed: Manually reconstructed the 'gradlew' executable, settings.gradle, and app/build.gradle files.
 Why: The previous automated initialization failed to create the executable wrapper, causing the GitHub Action to fail. This manual restoration provides the exact entry point the build runner needs.
+- What we changed: Downloaded the official 'gradle-wrapper.jar' and created 'gradle-wrapper.properties'.
+Why: The previous repair created the shell script but not the binary JAR file it needed to execute. This provides the actual engine required for the GitHub Action to compile the APK.

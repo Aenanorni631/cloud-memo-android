@@ -26,3 +26,5 @@ Why: To enable contextual follow-up reminders, allowing users to schedule system
 Why: To implement the core intelligence features of the app, allowing users to automatically condense long notes into quick summaries and extract tasks using AI.
 - What we changed: Created ExportService.js and added a '📄 Export PDF' button to the Notebook Dashboard.
 Why: To provide users with a way to generate shareable PDF documents from their notes, completing the core v1.0 feature set.
+- What we changed: Manually reconstructed the 'gradlew' executable, settings.gradle, and app/build.gradle files.
+Why: The previous automated initialization failed to create the executable wrapper, causing the GitHub Action to fail. This manual restoration provides the exact entry point the build runner needs.

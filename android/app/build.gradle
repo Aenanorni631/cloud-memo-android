@@ -1,0 +1,13 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.cloudmemo"
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.cloudmemo"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+}

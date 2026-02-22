@@ -3,12 +3,11 @@ apply plugin: "com.facebook.react"
 
 android {
     namespace "com.cloudmemo"
-    compileSdkVersion rootProject.ext.compileSdkVersion
-
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.cloudmemo"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
     }
@@ -18,6 +17,3 @@ dependencies {
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:hermes-android")
 }
-
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); 
-applyNativeModulesAppBuildGradle(project)

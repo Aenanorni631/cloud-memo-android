@@ -1,2 +1,4 @@
 - What we changed: Wiped all previous app files from the repository and created a clean cloud-memov1 workspace.
 Why: To completely clear out the broken configuration, remove the old Cloud Memo screen, and establish a blank slate for the version 1.0 rebuild.
+- What we changed: Created the global CSS theme, Settings component, Floating AI button, and the root App.js file. Restored package.json.
+Why: To establish the foundational UI framework and ensure the old skeleton screen is permanently replaced by our custom layout.

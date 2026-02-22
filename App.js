@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Settings from './src/components/Settings/Settings';
 import NotebookDashboard from './src/components/Notebooks/NotebookDashboard';
 import useSpeechToText from './src/hooks/useSpeechToText';
+import { GoogleService } from './src/services/GoogleService';
 import './src/styles/theme.css';
 
 export default function App() {
@@ -9,19 +10,31 @@ export default function App() {
     const [view, setView] = useState('notebooks');
     const { isListening, startSpeech, stopSpeech } = useSpeechToText();
 
+    const handleCloudSync = async () => {
+        alert("Initiating Google Cloud Sync...");
+        await GoogleService.syncToDrive([]);
+    };
+
     return (
         <div className={`app ${theme}`}>
-            <nav style={{ padding: '15px', background: 'rgba(0,0,0,0.3)', display: 'flex', justifyContent: 'space-between' }}>
+            <nav style={{ padding: '15px', background: 'rgba(0,0,0,0.3)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
-                    <button onClick={() => setView('notebooks')} style={{ color: view === 'notebooks' ? '#4da6ff' : 'white', background: 'none', border: 'none', marginRight: '15px' }}>Notebooks</button>
+                    <button onClick={() => setView('notebooks')} style={{ color: view === 'notebooks' ? '#4da6ff' : 'white', background: 'none', border: 'none', marginRight: '15px', fontWeight: 'bold' }}>Notebooks</button>
                     <button onClick={() => setView('settings')} style={{ color: view === 'settings' ? '#4da6ff' : 'white', background: 'none', border: 'none' }}>Settings</button>
                 </div>
-                <button onClick={isListening ? stopSpeech : startSpeech} style={{ color: isListening ? 'red' : 'white', background: 'none', border: 'none' }}>
-                    {isListening ? '🛑 Stop' : '🎤 Record'}
-                </button>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <button onClick={handleCloudSync} style={{ background: '#4da6ff', color: 'white', border: 'none', padding: '5px 10px', borderRadius: '4px', fontSize: '12px' }}>☁️ Sync</button>
+                    <button onClick={isListening ? stopSpeech : startSpeech} style={{ color: isListening ? '#ff4d4d' : 'white', background: 'none', border: 'none', fontSize: '18px' }}>
+                        {isListening ? '🛑' : '🎤'}
+                    </button>
+                </div>
             </nav>
-            {view === 'notebooks' ? <NotebookDashboard /> : <Settings changeTheme={setTheme} />}
-            <button className="floating-ai-btn" style={{ position: 'fixed', bottom: '20px', right: '20px', background: '#4da6ff', borderRadius: '50%', width: '60px', height: '60px', border: 'none' }}>✨</button>
+
+            <main style={{ flex: 1 }}>
+                {view === 'notebooks' ? <NotebookDashboard /> : <Settings changeTheme={setTheme} />}
+            </main>
+
+            <button className="floating-ai-btn" style={{ position: 'fixed', bottom: '20px', right: '20px', background: '#4da6ff', borderRadius: '50%', width: '60px', height: '60px', border: 'none', fontSize: '24px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>✨</button>
         </div>
     );
 }

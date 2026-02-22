@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Settings from './src/components/Settings/Settings';
 import NotebookDashboard from './src/components/Notebooks/NotebookDashboard';
+import AIChatPanel from './src/components/AIChat/AIChatPanel';
 import useSpeechToText from './src/hooks/useSpeechToText';
 import { GoogleService } from './src/services/GoogleService';
 import './src/styles/theme.css';
@@ -8,12 +9,8 @@ import './src/styles/theme.css';
 export default function App() {
     const [theme, setTheme] = useState('midnight-blue');
     const [view, setView] = useState('notebooks');
+    const [isChatVisible, setIsChatVisible] = useState(false);
     const { isListening, startSpeech, stopSpeech } = useSpeechToText();
-
-    const handleCloudSync = async () => {
-        alert("Initiating Google Cloud Sync...");
-        await GoogleService.syncToDrive([]);
-    };
 
     return (
         <div className={`app ${theme}`}>
@@ -23,7 +20,7 @@ export default function App() {
                     <button onClick={() => setView('settings')} style={{ color: view === 'settings' ? '#4da6ff' : 'white', background: 'none', border: 'none' }}>Settings</button>
                 </div>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                    <button onClick={handleCloudSync} style={{ background: '#4da6ff', color: 'white', border: 'none', padding: '5px 10px', borderRadius: '4px', fontSize: '12px' }}>☁️ Sync</button>
+                    <button onClick={() => GoogleService.syncToDrive([])} style={{ background: '#4da6ff', color: 'white', border: 'none', padding: '5px 10px', borderRadius: '4px', fontSize: '12px' }}>☁️ Sync</button>
                     <button onClick={isListening ? stopSpeech : startSpeech} style={{ color: isListening ? '#ff4d4d' : 'white', background: 'none', border: 'none', fontSize: '18px' }}>
                         {isListening ? '🛑' : '🎤'}
                     </button>
@@ -34,7 +31,13 @@ export default function App() {
                 {view === 'notebooks' ? <NotebookDashboard /> : <Settings changeTheme={setTheme} />}
             </main>
 
-            <button className="floating-ai-btn" style={{ position: 'fixed', bottom: '20px', right: '20px', background: '#4da6ff', borderRadius: '50%', width: '60px', height: '60px', border: 'none', fontSize: '24px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>✨</button>
+            <AIChatPanel isVisible={isChatVisible} closeChat={() => setIsChatVisible(false)} />
+
+            <button 
+                onClick={() => setIsChatVisible(true)}
+                className="floating-ai-btn" 
+                style={{ position: 'fixed', bottom: '20px', right: '20px', background: '#4da6ff', borderRadius: '50%', width: '60px', height: '60px', border: 'none', fontSize: '24px', boxShadow: '0 4px 12px rgba(0,0,0,0.5)', cursor: 'pointer', zIndex: 1000 }}
+            >✨</button>
         </div>
     );
 }

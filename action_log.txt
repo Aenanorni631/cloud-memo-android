@@ -18,3 +18,5 @@ Why: To fix the 'No such file or directory' error on GitHub by giving the build 
 Why: To resolve the 'cd android' build failure by restoring the native project files, and to implement Chunk 3 features for hands-free note-taking and local data persistence.
 - What we changed: Created GoogleService.js for Drive and Calendar API calls. Added a 'Sync' button to the main navigation bar in App.js.
 Why: To provide the infrastructure for cloud backups and scheduling, and to give the user a direct way to trigger cloud uploads from the UI.
+- What we changed: Created AIChatPanel.js and integrated it into the main App.js with visibility toggling.
+Why: To provide a dedicated interface for real-time AI assistance, allowing the user to interact with their notes through a conversational chat window.

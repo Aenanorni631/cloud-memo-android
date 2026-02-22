@@ -4,3 +4,5 @@ Why: To completely clear out the broken configuration, remove the old Cloud Memo
 Why: To establish the foundational UI framework and ensure the old skeleton screen is permanently replaced by our custom layout.
 - What we changed: Recreated the .github/workflows/build.yml file.
 Why: The repository wipe deleted the configuration that triggers GitHub Actions. This restores the trigger so builds can run automatically.
+- What we changed: Initialized the React Native framework, bringing back the android/, ios/, and configuration files.
+Why: The repository wipe deleted the core Android blueprints. These files are strictly required for GitHub Actions to compile the JavaScript code into a working APK.

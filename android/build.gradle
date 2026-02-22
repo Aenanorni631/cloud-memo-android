@@ -8,13 +8,11 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        // This is the 'Secret Door' - look locally for the plugin itself
-        maven { url("$rootDir/../node_modules/react-native/android") }
     }
     dependencies {
+        // Match the working version from your backup
         classpath("com.android.tools.build:gradle:8.0.2")
-        // We use the full group:name:version format to satisfy Gradle 8.0.2
-        classpath("com.facebook.react:react-native-gradle-plugin:0.72.0")
+        classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
 
@@ -22,7 +20,5 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url("$rootDir/../node_modules/react-native/android") }
-        maven { url("$rootDir/../node_modules/jsc-android/dist") }
     }
 }

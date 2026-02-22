@@ -1,7 +1,24 @@
-rootProject.name = 'CloudMemo'
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 
-// Link the native modules directly from the node_modules folder
-apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); 
-applyNativeModulesSettingsGradle(settings)
+plugins {
+    // This 'id' format is required for newer Gradle versions to find the plugin
+    id("com.facebook.react.settings")
+}
+
+// These extensions help link your npm packages to the Android build
+extensions.configure(com.facebook.react.ReactSettingsExtension) { settings ->
+    settings.autolinkLibrariesWithApp()
+}
 
 include ':app'
+rootProject.name = 'CloudMemo'
+
+// Link the native modules helper script
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); 
+applyNativeModulesSettingsGradle(settings)

@@ -52,3 +52,5 @@ Why: The screen was black because the app was starting as a generic Android app.
 Why: The app was failing because Android didn't know which class was responsible for starting the React Native engine. Linking the Manifest to MainApplication fixes the black screen and the build crash.
 - What we changed: Simplified Java boilerplate and bypassed the 'BuildConfig' check in MainApplication.
 Why: The build failed because it couldn't resolve specific symbols for the development environment. This 'Universal' configuration uses the standard React Native bridge that works across most versions.
+- What we changed: Manually added 'import com.cloudmemo.BuildConfig;' and verified the Java folder structure.
+Why: The compiler couldn't find the 'BuildConfig' symbol. By explicitly importing it from the app's package, we tell the Java compiler exactly where to look for the 'DEBUG' flag.

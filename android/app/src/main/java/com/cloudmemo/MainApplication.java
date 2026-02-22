@@ -6,6 +6,7 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.cloudmemo.BuildConfig;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -14,7 +15,7 @@ public class MainApplication extends Application implements ReactApplication {
       new ReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
-          return false; // Force false to avoid BuildConfig issues in debug
+          return BuildConfig.DEBUG;
         }
 
         @Override

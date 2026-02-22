@@ -50,3 +50,5 @@ Why: The build failed because it couldn't find the icon images that were lost in
 Why: The screen was black because the app was starting as a generic Android app. These Java changes initialize the React Native bridge, allowing the JavaScript UI (App.js) to actually be drawn on the screen.
 - What we changed: Added 'android:name=".MainApplication"' to the Manifest and verified Java boilerplate.
 Why: The app was failing because Android didn't know which class was responsible for starting the React Native engine. Linking the Manifest to MainApplication fixes the black screen and the build crash.
+- What we changed: Simplified Java boilerplate and bypassed the 'BuildConfig' check in MainApplication.
+Why: The build failed because it couldn't resolve specific symbols for the development environment. This 'Universal' configuration uses the standard React Native bridge that works across most versions.

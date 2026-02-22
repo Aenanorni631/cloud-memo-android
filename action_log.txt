@@ -62,3 +62,5 @@ Why: The previous build failed because the Java compiler couldn't see the React 
 Why: The previous builds were failing because the 'transmission' (the JAR file) was missing. This restores the exact environment that worked previously.
 - What we changed: Hardcoded the react-native-gradle-plugin version to 0.72.0 in the top-level build.gradle.
 Why: The build failed because it couldn't resolve the plugin version. By explicitly stating '0.72.0', we bypass the auto-detection that was failing in the GitHub Action environment.
+- What we changed: Added a 'pluginManagement' block to settings.gradle and updated the plugin classpath.
+Why: The build failed because Gradle couldn't locate the 'react-native-gradle-plugin' even after npm install. Adding these pointers ensures the build engine finds the plugin inside the node_modules folder.

@@ -44,3 +44,5 @@ Why: The app was white because the React Native engine was starting but had no '
 Why: To eliminate the white screen by correctly naming the component in the registry and to fix the 'blank android icon' by providing a proper manifest configuration.
 - What we changed: Updated the display name and manifest label to 'Cloud Memo V1.0'.
 Why: To ensure the app is correctly branded on the user's home screen and within the UI while maintaining system stability in the build files.
+- What we changed: Removed missing @mipmap icon references from the manifest and moved the 'com.cloudmemo' package ID to the build.gradle namespace.
+Why: The build failed because it couldn't find the icon images that were lost in the repo wipe. This fix allows the build to complete using system defaults and follows the latest Android build standards.

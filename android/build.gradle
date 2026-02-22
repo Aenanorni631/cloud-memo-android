@@ -5,16 +5,23 @@ buildscript {
         compileSdkVersion = 33
         targetSdkVersion = 33
     }
-    repositories { google(); mavenCentral() }
-    dependencies { 
-        classpath("com.android.tools.build:gradle:8.0.2") 
-        classpath("com.facebook.react:react-native-gradle-plugin")
-    }
-}
-allprojects {
-    repositories { 
+    repositories {
         google()
         mavenCentral()
-        maven { url "$rootDir/../node_modules/react-native/android" }
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.0.2")
+        // We are adding an explicit version here to stop the 'empty version' error
+        classpath("com.facebook.react:react-native-gradle-plugin:0.72.0")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        // This ensures Gradle looks inside your node_modules for the framework
+        maven { url("$rootDir/../node_modules/react-native/android") }
+        maven { url("$rootDir/../node_modules/jsc-android/dist") }
     }
 }

@@ -60,3 +60,5 @@ Why: The previous build failed with 21 errors because the Java compiler couldn't
 Why: The previous build failed because the Java compiler couldn't see the React Native framework. This script forces the build system to look into node_modules to find the missing 'com.facebook.react' packages.
 - What we changed: Replaced the build engine with the 8.0.2 backup configuration and downloaded the missing gradle-wrapper.jar.
 Why: The previous builds were failing because the 'transmission' (the JAR file) was missing. This restores the exact environment that worked previously.
+- What we changed: Hardcoded the react-native-gradle-plugin version to 0.72.0 in the top-level build.gradle.
+Why: The build failed because it couldn't resolve the plugin version. By explicitly stating '0.72.0', we bypass the auto-detection that was failing in the GitHub Action environment.

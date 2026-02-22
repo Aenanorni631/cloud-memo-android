@@ -6,3 +6,5 @@ Why: To establish the foundational UI framework and ensure the old skeleton scre
 Why: The repository wipe deleted the configuration that triggers GitHub Actions. This restores the trigger so builds can run automatically.
 - What we changed: Initialized the React Native framework, bringing back the android/, ios/, and configuration files.
 Why: The repository wipe deleted the core Android blueprints. These files are strictly required for GitHub Actions to compile the JavaScript code into a working APK.
+- What we changed: Initialized core UI theme, Settings component, and root App.js layout.
+Why: To establish the primary interface and ensure the GitHub-hosted code is updated with the version 1.0 architecture.
